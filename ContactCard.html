@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Contact Card</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="styles/customNormalize.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  <!--  jQuery 2.2.4 -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log('Document Ready');
+
+			$('button').on('click',function(){
+				$('ul').append('<li class="card click-it"><h2>' + $('#firstname').val() + ' ' + $('#lastname').val() + '</h2>' + '<p class="instruct">Click for Description</p>' + '<p class="description">' + $('#description').val() + '</p>' + '</li>');
+				// console.log($(this)[0]);
+				// console.log(event);
+				$('input[type="text"], textarea').val('');
+			});
+
+			$('#card-cabinet').on('click', '.click-it', function(){
+					$('.description', this).css('visibility','visible');
+					$('h2,.instruct', this).css('visibility', 'hidden');
+			});
+		});
+	</script>
+</head>
+<body>
+	 <!-- http://stackoverflow.com/questions/25735512/replace-div-content-onclick  -->
+	<div id="wrapper">
+		<form class="" action="index.html" method="post">
+			<label for="firstname">First Name: </label>
+			<input type="text" name="name" value="" id="firstname">
+			<label for="lastname">Last Name: </label>
+			<input type="text" name="name" value="" id="lastname">
+			<label for="description" id="description-label">Description: </label>
+			<textarea name="name" rows="8" cols="40" id="description"></textarea>
+			<button type="button" name="button">Add Contact Card</button>
+		</form>
+		<div id="card-cabinet">
+			<ul id="card-file">
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

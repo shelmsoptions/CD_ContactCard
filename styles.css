@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*used this (above) - now using the customNormalize.css*/
+#wrapper{
+	margin: 0 auto;
+	width: 900px;
+	height: 700px;
+}
+form{
+	width: 284px;
+	height: 400px;
+	border: 1px solid #333;
+	color: #333;
+	border-radius: 3px;
+	padding: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+#card-cabinet{
+	width: 400px;
+	margin: 0 0 0 100px;
+	display: inline-block;
+}
+.card{
+	width: 340px;
+	height: 120px;
+	border: 1px solid #333;
+	border-radius: 3px;
+	display: inline-block;
+	margin-top:10px;
+	text-align: center;
+}
+h2{
+	margin-top: 15px;
+	text-align: center;
+	color: #333;
+}
+#description{
+	width:260px;
+}
+.description{
+	visibility: hidden;;
+}
+input{
+	margin-top: 10px;
+}
