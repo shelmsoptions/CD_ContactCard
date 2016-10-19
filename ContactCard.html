@@ -20,8 +20,15 @@
 			});
 
 			$('#card-cabinet').on('click', '.click-it', function(){
+				if($('.description', this).css('visibility') == 'hidden' && $('h2,.instruct', this).css('visibility') == 'visible'){
 					$('.description', this).css('visibility','visible');
-					$('h2,.instruct', this).css('visibility', 'hidden');
+					$('h2,.instruct', this).css('visibility','hidden');
+				}
+				else{
+					$('.description', this).css('visibility','hidden');
+					$('h2,.instruct', this).css('visibility','visible')
+				}
+					// $('h2,.instruct', this).css('visibility', 'hidden');
 			});
 		});
 	</script>
@@ -45,3 +52,4 @@
 	</div>
 </body>
 </html>
+
